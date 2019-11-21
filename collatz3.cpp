@@ -1,5 +1,4 @@
 #include <iomanip>
-#include <fstream>
 #include <iostream>
 
 using namespace std;
@@ -17,10 +16,6 @@ void collatz_path(int n)
 
 int main()
 {
-	fstream fout;
-	fout.open("collatz_numbers.txt");
-
-	
 	for (int n = -1; n>-50; n--)
 	{
 		collatz_path(n);
