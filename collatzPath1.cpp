@@ -1,5 +1,4 @@
 #include <iomanip>
-#include <fstream>
 #include <iostream>
 
 using namespace std;
@@ -17,18 +16,16 @@ void collatz_path(int n,int &length)
 
 int main()
 {
-	fstream fout;
-	fout.open("collatz_numbers.txt");
 
-	fout << "Starting Integer | length\n";
-	fout << "-------------------------\n";
+	cout << "Starting Integer | length\n";
+	cout << "-------------------------\n";
 	
 	for (int n = 1; n<31; n++)
 	{
 		int length = -1;		
 		collatz_path(n,length);
-		fout << left << setw(16) << n << " |  " << length;
-		fout << endl;
+		cout << left << setw(16) << n << " |  " << length;
+		cout << endl;
 	}
 	return 0;
 }
